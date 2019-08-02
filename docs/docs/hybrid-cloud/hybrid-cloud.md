@@ -1,7 +1,7 @@
 ---
 layout: default-edit
 title: Hybrid Cloud
-nav_order: 5
+nav_order: 4
 description: "Hybrid Cloud"
 permalink: /hybrid-cloud
 ---
