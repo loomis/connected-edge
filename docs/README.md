@@ -36,16 +36,35 @@ this documentation can be served locally to shorten the editing
 cycle.
 
 First, you **must** have a full Ruby development environment setup on
-your machine. For Mac OS, Ruby is available via
-[Homebrew](https://brew.sh/). See the Ruby site for [installation
-instructions](https://www.ruby-lang.org/en/documentation/installation/)
-on other platforms.
+your machine.
+
+For MacOS, Ruby is available via [Homebrew](https://brew.sh/). If you
+use Homebrew, be sure to setup your path to use the ruby executable
+from Homebrew and not the default `ruby` on macOS. This can be done
+with:
+
+```sh
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+```
+
+You may want to add this to your `~/.bash_login` script. You should
+also make sure that the bundler gem is installed:
+
+```sh
+gem install bundler
+```
+
+Again, be sure that the `gem` from Homebrew is the one in your
+path. Check with `which gem`. 
+
+For other platforms, see the Ruby site for [installation
+instructions](https://www.ruby-lang.org/en/documentation/installation/).
 
 Next, clone this repository and move to the `docs` subdirectory of
 your local copy.
 
 Install the necessary Ruby gems on your machine.  To avoid a global
-installation, you can use the following command:
+installation, you use the following command:
 
 ```sh
 bundle install --path vendor/bundle
@@ -57,7 +76,7 @@ subdirectory.  The contents of this directory are ignored by git.
 Finally, build and serve the documentation with the following command:
 
 ```sh
-bundle exec jekyll serve --watch --baseurl "" --config _config_local.yml,_config.yml
+bundle exec jekyll serve --livereload --baseurl "" --config _config_local.yml,_config.yml
 ```
 
 The startup logging will indicate the server's URL; this is usually
@@ -67,7 +86,18 @@ The double configuration files are required to allow the content to be
 served locally and also on GitHub pages without build errors in either
 place.
 
-In principle, the `--watch` option could be replaced with
-`--livereload`, which would then automatically reload the browser.
-Unfortunately, this fails with a link error on Mac OS.  If you find a
-solution to this issue, update the instructions here.
+## Live Reload Troubles
+
+If you run into problems with live reload on macOS, there are two
+solutions.
+
+The first is to replace the `--livereload` option with `--watch`.
+This will recompile the jekyll web site on changes, but not reload
+your browser.
+
+Presuming that the live reload is failing with a link error on macOS,
+you need to fix your ruby configuration. Be sure that you're using the
+`ruby` and `gem` executables from Homebrew and not the macOS default
+ones. Then with the correct `gem` executable, install the bundler gem
+with `gem install bundler`. This should resolve any issues you're
+having. 
