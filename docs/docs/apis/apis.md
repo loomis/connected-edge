@@ -4,7 +4,7 @@ title: IaaS Programming Interfaces
 nav_order: 3
 has_children: true
 description: "Common IaaS Programming Interfaces"
-permalink: /programming-interfaces
+permalink: /apis
 ---
 
 # IaaS Programming Interfaces

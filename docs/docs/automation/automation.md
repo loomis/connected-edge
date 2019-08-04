@@ -1,12 +1,12 @@
 ---
 layout: default-edit
-title: Hybrid Cloud
+title: Automation
 nav_order: 4
-description: "Hybrid Cloud"
-permalink: /hybrid-cloud
+description: "Automation"
+permalink: /automation
 ---
 
-# Hybrid Cloud
+# Automation
 
 A customized cloud infrastructure consisting of several different
 platforms quickly becomes a necessity for many institutes, either
