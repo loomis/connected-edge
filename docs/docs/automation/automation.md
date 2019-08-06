@@ -3,7 +3,7 @@ layout: default-edit
 title: Automation
 nav_order: 3
 description: "Automation"
-permalink: /automation
+permalink: /docs/automation
 ---
 
 # Automation
