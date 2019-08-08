@@ -179,14 +179,93 @@ efficient. If you understand the deployment process for custom
 SlipStream components, you will find the build process for Docker very
 similar.
 
-To create a container, create a new empty directory,
-e.g. `container1`.  Inside that subdirectory, create an empty file
-named `Dockerfile`. The `Dockerfile` contains the "recipe" for
-transforming an existing container into a new, customized
-container. The subdirectory forms the "context" of the build. 
+To build a new image, you will have to follow these step:
 
-The build process is controlled through a `Dockerfile`. If
-you search on GitHub, you'll find many example of 
+ 1. Create a `Dockerfile` to incorporate your changes into a new
+    image.
+
+ 1. Build the container and test the image locally.
+
+ 1. Upload the image to a public repository.
+
+ 1. Create a module within Nuvla that references your modified
+    container, adding output parameter definitions when appropriate.
+
+ 1. Delete the local copy of the image.
+
+ 1. Re-run the container to be sure that the container is downloaded
+    and then runs correctly.  
+
+If the container doesn't start as you expect, you may need to access
+the logs from Docker Swarm directly to help with the debugging.
+
+To create an image, create a new empty directory, e.g. `container1`.
+
+Inside that subdirectory, create an empty file named `Dockerfile`. The
+`Dockerfile` contains the "recipe" for transforming an existing
+container into a new, customized container. For example, for an nginx
+image:
+
+```
+FROM ubuntu:18.04
+RUN apt-get update
+RUN apt-get install -y nginx
+COPY index.html /var/www/html/index.nginx-debian.html
+ADD start.sh /usr/sbin/start.sh
+RUN chmod a+x /usr/sbin/start.sh
+EXPOSE 80
+ENTRYPOINT /usr/sbin/start.sh
+```
+
+Create a script to start nginx (e.g. `start.sh`):
+
+```
+#!/bin/bash -xe
+nginx -g 'daemon off;'
+```
+
+Create a new `index.html` file:
+
+```
+<html>
+  <head>
+    <title>HELLO FROM DOCKER</title>
+  </head>
+  <body>
+    <h1>HELLO FROM DOCKER</h1>
+    <p>everything is good</p>
+  </body>
+</html>
+```
+
+To execute the build, run:
+
+```
+docker build . --tag mynginx
+```
+
+Run this locally to check that it works.  (You'll need to use the `-p`
+option.) When finished, push this to your Docker Hub account. (See
+below.)
+
+Delete the local copy of the image and re-run the container to be sure
+the new image is downloaded and that it runs correctly.
+
+### Uploading Containers
+
+The easiest to use is Docker Hub.  If you have an account on Docker
+Hub, you can create an organization to hold your "repositories", each
+of which holds multiple tagged versions of an image.
+
+The process is straightforward:
+
+ 1. Use the `docker login` command to log into the Docker Hub.
+ 1. Build your image with `docker build`.
+ 1. Tag for image with `docker tag`, providing a tag name.
+ 1. Upload the image with `docker push`.
+
+At this point, the image will be visible in the Docker Hub and can
+then be used from Docker.
 
 ## Docker Compose
 
