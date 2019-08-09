@@ -98,7 +98,7 @@ You will now create a (virtual) NuvlaBox to show how edge devices are
 registered with the system and how applications can be deployed to
 those devices.
 
- 1. Log into test.nuvla.io.
+ 1. Log into nuvla.io.
  
  1. Navigate to the "edge" section of the UI. 
 
