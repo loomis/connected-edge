@@ -2,6 +2,7 @@
 layout: default-edit
 title: Edge Computing
 nav_order: 5
+has_children: true
 description: "Edge Computing"
 permalink: /edge
 ---
