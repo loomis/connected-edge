@@ -1,7 +1,7 @@
 ---
 layout: default-edit
 title: Automation
-nav_order: 3
+nav_order: 4
 description: Automation
 has_children: true
 permalink: /automation

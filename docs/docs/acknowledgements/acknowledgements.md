@@ -1,7 +1,7 @@
 ---
 layout: default-edit
 title: Acknowledgements
-nav_order: 11
+nav_order: 7
 ---
 
 # Acknowledgements

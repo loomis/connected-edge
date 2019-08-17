@@ -1,7 +1,7 @@
 ---
 layout: default-edit
 title: Legal
-nav_order: 12
+nav_order: 8
 ---
 
 # Legal
