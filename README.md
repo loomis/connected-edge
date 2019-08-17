@@ -14,7 +14,7 @@ Copyright &copy; 2019, Charles A. Loomis Jr.
 
 ## License
 
-![license-logo](/docs/assets/cc-license.png)
+![license-logo](/docs/docs/legal/assets/cc-license.png)
 
 This work is licensed under a [Creative Commons Attribution 4.0
 International
