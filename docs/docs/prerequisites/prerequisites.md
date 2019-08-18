@@ -9,13 +9,28 @@ permalink: /docs/prerequisites
 
 # Prerequisites
 
-Students are expected to be comfortable working from the command line
-within Linux operating systems (CentOS and Ubuntu) and capable of
-performing simple administrative tasks, such as the installation of
-packages and management of system services.
+By design, cloud and edge computing scenarios involve the use of
+remote computing resources that are accessible only via the Internet.
+For cloud computing, these resources reside in data centers operated
+by cloud service providers. Edge computing devices live at the "edge"
+of the network close to sensors that collect interesting data, e.g.
+bus stops and electrical distribution cabinets.
 
-The practical exercises intensively use the REST and Python APIs of
-the cloud infrastructures and other services.  Consequently, students
-must have a solid grounding in the Python programming language and
-good knowledge of the HTTP(S) protocol. Experience with other
-programming languages such as Java would be beneficial.
+The vast majority of cloud and edge resources run versions of the
+Linux operating system. This course makes extensive use of the Linux
+operating system and consequently, students should:
+
+ - Have a laptop or workstation that provides a Linux-like environment
+   for interacting with cloud and edge resources,
+
+ - Know how to use the Linux operating system via the command line,
+   and
+
+ - Be familiar with protocols and tools for remote access to machines,
+   notably SSH.
+
+ - Have some programming experience in Python (or another programming
+   language) and understand how the HTTP protocol works.
+
+The following sections provide some details for each of these
+prerequisites.
