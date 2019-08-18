@@ -18,9 +18,14 @@ $white-text: #ffffff;
   color: $sidebar-text-color !important;
 }
 
+.side-bar span {
+  display: none;
+}
+
 .site-title {
   background-color: $sidebar-background-color;
-  height: auto;  
+  height: auto;
+  flex-grow: 0;
 }
 
 a.site-title {
