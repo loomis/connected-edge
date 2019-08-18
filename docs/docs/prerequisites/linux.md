@@ -1,12 +1,12 @@
 ---
 layout: default-edit
-title: Linux
+title: Linux Operating System
 nav_order: 2
 parent: Prerequisites
 permalink: /docs/prerequisites/linux
 ---
 
-# Linux
+# Linux Operating System
 
 Most virtual machines in the cloud and devices on the edge run Linux
 operating systems. Moreover, these systems typically run in "headless"
@@ -87,13 +87,13 @@ information for both systems.
 
 ### Ubuntu 18.04
 
-#### Super User
+#### Administrator
 
-System administration commands must be run from the "root"
-(super user) account.
+System administration commands must be run from the "root" (super user
+or administrator) account.
 
 Normally with Ubuntu, you will log into the "ubuntu" account, which is
-a normal user account, not a super user account. To run system
+a normal user account, not an administrator account. To run system
 administration commands from the "ubuntu" account, there are two
 options:
 
@@ -101,15 +101,15 @@ options:
    temporarily to the super user account and execute the command given
    to `sudo`.
 
- - Switch into the "root" account with the command "sudo su -". This
+ - Switch into the "root" account with the command `sudo su -`. This
    creates a new session with the "root" account. System administrator
    accounts can be run with a `sudo` prefix. To close the "root" shell
    and return to the "ubuntu" account, just type `exit`. 
 
-On Exoscale, there is also a third option. The Exoscale Ubuntu images
-are configured so that you can SSH directly into the root account.
-Just change the command: `ssh ubuntu@ipv4-address` to `ssh
-root@ipv4-address`. 
+On many cloud providers, there is also a third option. Many Ubuntu
+cloud images are configured so that you can SSH directly into the root
+account.  Just change the command: `ssh ubuntu@ipv4-address` to `ssh
+root@ipv4-address`.
 
 #### Package Management
 
@@ -122,9 +122,9 @@ root@ipv4-address`.
 | install package | `apt install PACKAGE` |
 | remove package | `apt remove PACKAGE` |
 
-Try all of these command to understand how they work. Try searching,
-installing, and removing the "nginx" package. Nginx is one of the
-standard web servers.
+Understand how all these commands work. If you have access to an
+Ubuntu machine, try searching, installing, and removing the "nginx"
+package. Nginx is one of the standard web servers.
 
 #### Editors
 
@@ -140,7 +140,7 @@ has a very short learning curve.  You can also install `emacs`
 Services are normally managed with the `systemctl` command (and
 friends). The full service management subsystem is called
 [systemd](https://www.freedesktop.org/wiki/Software/systemd/). Earlier
-Ubuntu operating systems used a different system management system.
+Ubuntu operating systems used a different service management system.
 
 | action | command |
 | --- | --- |
@@ -154,32 +154,19 @@ Ubuntu operating systems used a different system management system.
 | disable service | `systemctl disable SERVICE` |
 | service output | `journalctl -u SERVICE` |
 
-To understand how these commands work, reinstall the "nginx"
-package. When the service is started, you should be able to see the
-default landing page with the command:
+To understand how these commands work, reinstall the "nginx" package
+on an Ubuntu machine. When the service is started, you should be able
+to see the default landing page with the command:
 
 ```
 curl http://localhost
 ```
 
 This will dump the raw HTML content.  In the HTML, you should see a
-header element like `<h1>Welcome to nginx!</h1>`. 
+header element like `<h1>Welcome to nginx!</h1>`.
 
-Try to do the same from outside of the machine. It will likely fail
-because the server cannot be contacted from your browser. There are
-probably two reasons why.  Can you think of what they could be?
-
-The first reason is probably that your default security group on
-Exoscale is not configured correctly.  We opened ports for `ping` and
-`ssh`, not for HTTP(S). Can you modify your default security group to
-open the ports 80 (HTTP) and 443 (HTTPS)?
-
-The second reason is probably a local firewall running on your VM. The
-local firewall filters network traffic **in addition to** the security
-group. Rather than configuring both the security group and local
-firewall, it is generally easier just to disable the local
-firewall. The name of the local firewall service on Ubuntu is
-"ufw". Can you use the system administrator commands to disable it?
+Try the various service management commands to understand how they
+affect the nginx service.
 
 #### IP Address
 
@@ -191,10 +178,10 @@ assigned to the "eth0" interface.
 
 ### CentOS 7 
 
-#### Super User
+#### Administrator
 
 System administration commands must be run from the "root"
-(super user) account.
+(super user or administrator) account.
 
 Normally with CentOS on Exoscale, you will log into the "centos"
 account, which is a normal user account, not a super user account. To
@@ -205,14 +192,14 @@ are two options:
    temporarily to the super user account and execute the command given
    to `sudo`.
 
- - Switch into the "root" account with the command "sudo su -". This
+ - Switch into the "root" account with the command `sudo su -`. This
    creates a new session with the "root" account. System administrator
    accounts can be run with a `sudo` prefix. To close the "root" shell
    and return to the "centos" account, just type `exit`.
 
-On Exoscale, there is also a third option. The Exoscale CentOS images
-are configured so that you can SSH directly into the root account.
-Just change the command: `ssh centos@ipv4-address` to `ssh
+On many cloud providers, there is also a third option. Many CentOS
+cloud images are configured so that you can SSH directly into the root
+account.  Just change the command: `ssh ubuntu@ipv4-address` to `ssh
 root@ipv4-address`.
 
 #### Package Management
@@ -261,7 +248,7 @@ you're familiar with it.
 Services are normally managed with the `systemctl` command (and
 friends). The full service management subsystem is called
 [systemd](https://www.freedesktop.org/wiki/Software/systemd/). Earlier
-CentOS operating systems used a different system management system.
+CentOS operating systems used a different service management system.
 
 | action | command |
 | --- | --- |
@@ -275,9 +262,9 @@ CentOS operating systems used a different system management system.
 | disable service | `systemctl disable SERVICE` |
 | service output | `journalctl -u SERVICE` |
 
-To understand how these commands work, reinstall the "nginx"
-package. When the service is started, you should be able to see the
-default landing page with the command:
+To understand how these commands work, reinstall the "nginx" package
+on an Ubuntu machine. When the service is started, you should be able
+to see the default landing page with the command:
 
 ```
 curl http://localhost
@@ -287,22 +274,8 @@ This will dump the raw HTML content.  In the HTML, you should see a
 title element like `<title>Test Page for the Nginx HTTP Server on
 Fedora</title>`.
 
-Try to do the same from outside of the machine. It will likely fail
-because the server cannot be contacted from your browser. There are
-probably two reasons why.  Can you think of what they could be?
-
-The first reason is probably that your default security group on
-Exoscale is not configured correctly.  We opened ports for `ping` and
-`ssh`, not for HTTP(S). Can you modify your default security group to
-open the ports 80 (HTTP) and 443 (HTTPS)?
-
-The second reason is probably a local firewall running on your VM. The
-local firewall filters network traffic **in addition to** the security
-group. Rather than configuring both the security group and local
-firewall, it is generally easier just to disable the local
-firewall. The name of the local firewall service on CentOS is
-"firewalld". Can you use the system administrator commands to disable
-it?
+Try the various service management commands to understand how they
+affect the nginx service.
 
 #### IP Address
 
@@ -311,4 +284,3 @@ machine. You can always get this from Exoscale, but it often easier to
 get this from within the VM itself.  There are many ways to do this,
 but the easiest is just `ifconfig`.  Look for the "inet" value
 assigned to the "eth0" interface.
-

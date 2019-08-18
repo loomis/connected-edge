@@ -1,90 +1,73 @@
 ---
 layout: default-edit
-title: SSH
+title: Secure Shell (SSH)
 nav_order: 3
 parent: Prerequisites
 permalink: /docs/prerequisites/ssh
 ---
 
-# SSH Configuration
+# Secure Shell (SSH)
 
-In the previous exercise, you deployed a VM and then accessed it via
-a web-based console. As mentioned earlier, this is **not** recommended
-for regular use. Instead you should use SSH key pairs to access the
-VMs that you deploy.
+You will use the Secure Shell (SSH) to interact with remote cloud and
+edge resources. SSH is a system that uses a defined protocol, client,
+and servers to govern access to remote resources. Users and machines
+(hosts) are identified through cryptographic keys.
 
-## Create SSH Key Pair
+Digital Ocean has a good tutorial that covers the [SSH
+Essentials](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys).
 
-If you have an existing SSH key pair, you do not need to create a new
-one. Just use the one that you have. 
+The important commands for this training are:
 
-If you do not have an SSH key pair already, then you will need to
-create one. A new key pair can be created easily from the command line
-on any machine that has SSH installed. Virtually all Linux operating
-systems have SSH installed by default.  It is also available by
-default on macOS.
+| command | description |
+| --- | --- |
+| `ssh-keygen` | creates a new SSH key pair |
+| `ssh` | opens a shell or executes a command on remote machine |
+| `scp` | copies a file from/to a remote machine |
 
-Assuming that SSH is installed on your machine, open a terminal and
-execute the following command:
+Be sure to understand the syntax of these commands and how they work.
+
+## SSH Keys
+
+It is extremely important to understand how SSH uses key pairs to
+identify users (and hosts).  Each user is identified by a key pair,
+which consists of a private key and a public key. As implied by the
+names, the private key must be kept secret by the user, while the
+public key can be shared with other people and machines.
+
+In normal usage, a user has a single key pair, which is used to log
+into multiple cloud or edge machines. A rough analogy is a passport. A
+person normally has a single passport which allows that person access
+to multiple countries. Unlike a passport, you only show the public key
+to others; the private key remains a secret that is not shown to
+anyone else.
+
+On a Linux system, the normal location for the public and private keys
+are:
 
 ```
-ssh-keygen
+~/.ssh/id_rsa.pub
+~/.ssh/id_rsa
 ```
 
-You can then respond interactively to the prompts to generate your
-key. 
+respectively. In many cases, a private key generated **without a
+password** is easier to use. 
+
+## Host Keys
+
+Like people, machines are also identified via key pairs. When logging
+into a remote machine the first time, you will either:
+
+ - Be asked to trust a host key ("yes" will trust the host and add it
+   to your "known hosts file) or 
+
+ - See a warning that the host has been added automatically to your
+   "known hosts" file. 
+
+This list is stored by default in the file:
 
 ```
-Generating public/private rsa key pair.
-Enter file in which to save the key (~/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
-Your identification has been saved in ~/.ssh/id_rsa_test.
-Your public key has been saved in ~/.ssh/id_rsa_test.pub.
-The key fingerprint is:
-SHA256:LcG3FnpclJh2zQBODXDH1vCCxHBVQ9/WmF7hnXMg/TY loomis@Macintosh-3.local
-The key's randomart image is:
-+---[RSA 2048]----+
-|        o+BOB@=. |
-|       . *=+*o***|
-|        o.=oo +=O|
-|         * + o E=|
-|        S *   ...|
-|         +       |
-|                 |
-|                 |
-|                 |
-+----[SHA256]-----+
+~/.ssh/known_hosts
 ```
 
-In the output above, the default location for the key has been used
-(`${HOME}/.ssh/id_rsa`) and no passphrase was used.  If you provide a
-passphrase, you'll need to provide it everytime you use the key. This
-is generally annoying, but can be made easier with `ssh-agent`.
-
-## Upload Public Key to Exoscale
-
-Log into the Exoscale portal and then go to the `COMPUTE/SSH KEYS`
-tab. If you've not yet registered an SSH key, then the page will look
-like the following:
-
-![Exoscale SSH Keys](assets/exoscale-empty-ssh-keys.png)
-
-Click on the "Create one now!" link or the "ADD" button.  This will
-bring up a form where you can import the key you have just
-created. Make sure that the import tab is selected and then fill in
-the fields.
-
-![Import SSH Key to Exoscale](assets/exoscale-import-ssh-key.png)
-
-Click the "IMPORT" button. This should redirect you to a page with a
-list of SSH keys, which should now contain the one you just
-imported. **You should also click on the link "Set as default" to
-add this key to all your VMs automatically.**
-
-![List of SSH Keys in Exoscale](assets/exoscale-ssh-key-list.png)
-
-> **NOTE**: You can also generate a key pair directly through the
-> portal. Make sure you have the private key when it is presented. You
-> will also need to recover the public key so it can be used from
-> other machines.  
+This is a simple text file which you can view. Any host that you no
+longer trust can be removed by just deleting the line for that host.

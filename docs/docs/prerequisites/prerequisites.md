@@ -20,8 +20,9 @@ The vast majority of cloud and edge resources run versions of the
 Linux operating system. This course makes extensive use of the Linux
 operating system and consequently, students should:
 
- - Have a laptop or workstation that provides a Linux-like environment
-   for interacting with cloud and edge resources,
+ - Have a local machine (laptop or workstation) that provides a
+   Linux-like environment for interacting with cloud and edge
+   resources,
 
  - Know how to use the Linux operating system via the command line,
    and
