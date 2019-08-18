@@ -20,10 +20,15 @@ $white-text: #ffffff;
 
 .site-title {
   background-color: $sidebar-background-color;
+  height: auto;  
 }
 
 a.site-title {
   color: $white-text !important;
+}
+
+.side-bar#span {
+  visibility: hidden;
 }
 
 .navigation-list-link.active {
