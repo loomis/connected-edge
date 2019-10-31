@@ -5,8 +5,7 @@ cloud and edge computing. See the README in the `docs` subdirectory
 for how to build the documentation locally and to contribute.
 
 If you just want to see the training course, visit the [GitHub Pages
-Website](https://loomis.github.io/connected-edge/) for this
-repository.
+Website](https://training.yobitrust.com) for this repository.
 
 ## Copyright
 
