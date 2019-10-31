@@ -9,7 +9,7 @@ Website](https://training.yobitrust.com) for this repository.
 
 ## Copyright
 
-Copyright &copy; 2019, Charles A. Loomis Jr.
+See the legal page in each course for copyright information.
 
 ## License
 
