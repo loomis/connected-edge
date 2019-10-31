@@ -13,9 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Connected Edge
-email: cal.loomis@gmail.com
-description: hybrid cloud training that stretches to the edge
+title: Yobitrust Training
+email: contact@yobitrust.com
+description: Yobitrust training
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: loomis

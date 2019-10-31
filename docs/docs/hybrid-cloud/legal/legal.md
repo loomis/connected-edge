@@ -1,14 +1,16 @@
 ---
 layout: default-edit
 title: Legal
-nav_order: 6
+nav_order: 8
+parent: Hybrid Cloud (07/2019)
+permalink: /docs/hybrid-cloud/legal
 ---
 
 # Legal
 
 ## Copyright
 
-See individual courses for copyright information. 
+Copyright &copy; 2019, Charles A. Loomis Jr.
 
 ## License
 
