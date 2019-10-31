@@ -8,3 +8,4 @@ permalink: /deep-learning
 ---
 
 Deep learning course is being prepared. Keep watching this space!
+via Python
