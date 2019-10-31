@@ -29,7 +29,7 @@ remote_theme: pmarsceill/just-the-docs
 search_enabled: true
 aux_links:
     "GitHub Sources":
-      - "//github.com/loomis/connected-edge"
+      - "//github.com/loomis/training"
 
 #plugins:
 #  - jekyll-feed

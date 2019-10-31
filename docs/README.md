@@ -4,7 +4,7 @@ This subdirectory contains the sources for the hybrid cloud and edge
 computing training course
 
 This documentation appears on a [GitHub Pages
-site](https://loomis.github.io/connected-edge/) linked to this
+site](https://training.yobitrust.com) linked to this
 repository. Commits to the master branch of this repository will
 automatically update the pages website.
 
