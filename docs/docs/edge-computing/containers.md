@@ -415,7 +415,7 @@ this page by opening the menu in the top-right corner and selecting
 the "settings" button next to your repository. You should see a page
 like the following screenshot.
 
-![Exoscale Registration](assets/travis-ci-repo-settings.png)
+![Travis CI Repository Settings](assets/travis-ci-repo-settings.png)
 
 In the environmental variables section, define the two variables:
 
