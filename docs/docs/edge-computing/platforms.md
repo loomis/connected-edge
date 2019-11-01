@@ -2,7 +2,6 @@
 layout: default-edit
 title: Platforms
 nav_order: 2
-has_children: true
 parent: Edge Computing (11/2019)
 description: Platforms
 permalink: /docs/edge-computing/platforms
