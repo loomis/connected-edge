@@ -111,14 +111,40 @@ apt-get update
 apt-get upgrade -y
 ```
 
-Install Docker:
+Remove any old versions of Docker:
 
 ```
-addgroup --system docker
-adduser ubuntu docker
-newgrp docker
+apt-get remove -y docker docker-engine docker.io containerd runc
+```
 
-snap install docker
+It is OK if any of the packages are not installed. Then install the
+Docker community edition repository for ARM64:
+
+```
+apt-get install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+add-apt-repository \
+   "deb [arch=arm64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+```
+
+Install Docker and add "ubuntu" to the "docker" group:
+
+```
+apt-get update
+apt-get install -y docker-ce docker-ce-cli containerd.io
+
+usermod --append --groups docker ubuntu
+
+docker swarm init
 ```
 
 Reboot the machine:

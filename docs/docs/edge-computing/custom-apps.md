@@ -1,7 +1,7 @@
 ---
 layout: default-edit
 title: Custom Applications
-nav_order: 8
+nav_order: 7
 parent: Edge Computing (11/2019)
 description: Custom Applications
 permalink: /docs/edge-computing/custom-apps
