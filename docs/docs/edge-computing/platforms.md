@@ -36,6 +36,8 @@ devices to amplify the scale of those attacks. The IoT devices used in
 these attacks often have no security protocols or use default
 passwords that often not changed.
 
+![IoT Architecture](assets/iot-architecture.png)
+
 ## Edge
 
 Several trends have contributed to the emergence of edge
@@ -46,6 +48,8 @@ tablets and make it possible to build gateways that have significant
 computing capacity, memory, and storage. Lastly, the wide-spread
 adoption of hybrid cloud computing has provided the framework for
 structuring IoT devices inside of an edge architecture.
+
+![Edge Architecture](assets/edge-architecture.png)
 
 ## Reflection
 
