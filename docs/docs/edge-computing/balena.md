@@ -275,5 +275,23 @@ and think about what aspects of the system you liked and
 disliked. 
 
 Consider the system from the viewpoint of an administrator, a
-developer, and a user. Which features appeal to each type of user? Are
-there any blocking points for any of these people? 
+developer, and an end-user. Which features appeal to each type of
+user? Are there any critical missing pieces for any of these people?
+
+## Other Solutions
+
+There are a number of other IoT solution, all of which take slightly
+different technical and business approaches to edge computing. Some of
+these solutions include:
+
+ * [Azure IoT](https://azure.microsoft.com/en-us/free/iot/)
+
+ * [Amazon IoT](https://aws.amazon.com/iot/)
+
+ * [Nuvla](https://sixsq.com/products-and-services/nuvla/overview) and
+   [NuvlaBox](https://sixsq.com/products-and-services/nuvlabox/overview) 
+
+Review their offerings and compare their features and cost
+structures. How do these compare with BalenaCloud? What are the
+strengths and weaknesses of each one with respect to ease of use,
+device support, security, maintainability, operations, etc.?
