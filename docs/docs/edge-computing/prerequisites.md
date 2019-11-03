@@ -1,20 +1,13 @@
 ---
 layout: default-edit
-title: Introduction
+title: Prerequisites
 nav_order: 1
 parent: Edge Computing (11/2019)
-description: Introduction
-permalink: /docs/edge-computing/introduction
+description: Prerequisites
+permalink: /docs/edge-computing/prerequisites
 ---
 
-# Introduction
-
-This course provides an overview of edge computing platforms and the
-use cases that motivate these platforms. The goal of the course is
-that you understand the edge computing architecture and key
-technologies that facilitate the use of these platforms. 
-
-## Prerequisites
+# Prerequisites
 
 The technical exercises rely heavily on the use of standard software
 development and testing tools. These often require interaction with

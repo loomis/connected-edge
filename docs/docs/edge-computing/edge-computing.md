@@ -7,4 +7,7 @@ description: "Edge Computing"
 permalink: /edge-computing
 ---
 
-Edge computing course is being prepared.  Keep watching this space!
+This course provides an overview of edge computing platforms and the
+use cases that motivate these platforms. The goal of the course is
+that you understand the edge computing architecture and key
+technologies that facilitate the use of these platforms.
