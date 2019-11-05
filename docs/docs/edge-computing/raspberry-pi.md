@@ -171,7 +171,7 @@ from your work machine.
 Log into your RPi as "ubuntu". Then run the command:
 
 ```
-docker run -p 80:80 -d DOCKER_ID/custom-webserver
+docker run -p 80:80 -d DOCKER_ID/example-webserver
 ```
 
 changing DOCKER_ID to your Docker Hub ID. Verify that your custom

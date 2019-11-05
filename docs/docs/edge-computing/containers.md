@@ -349,7 +349,7 @@ Docker Hub repository.
 Tasks:
 
  * Rebuild your customized webserver on your work machine. Use the
-   command `docker build . --tag DOCKER_ID/custom-webserver`,
+   command `docker build . --tag DOCKER_ID/example-webserver`,
    replacing DOCKER_ID with your personal docker ID.
 
  * Verify that you see the tagged image on your machine: `docker image
@@ -359,20 +359,20 @@ Tasks:
    need to provide your docker ID and password.
 
  * Push your customized image to Docker Hub: `docker push
-   DOCKER_ID/custom-webserver`.
+   DOCKER_ID/example-webserver`.
 
  * Verify that you see the pushed image on Docker Hub. 
 
 At this point, you have an image that has been pushed to Docker Hub
-and can be run by anyone by using the tag DOCKER_ID/custom-webserver.
+and can be run by anyone by using the tag DOCKER_ID/example-webserver.
 
 Tasks:
 
  * Remove your local image: `docker image rm
-   DOCKER_ID/custom-webserver`.
+   DOCKER_ID/example-webserver`.
 
  * Re-run your image with `docker run -p 8080:80 -d
-   DOCKER_ID/custom-webserver` and ensure that the image is pulled
+   DOCKER_ID/example-webserver` and ensure that the image is pulled
    from Docker Hub and that it works.
 
  * Stop your container.
