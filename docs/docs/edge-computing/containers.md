@@ -266,7 +266,33 @@ http {
 
 This is a slightly modified copy of the standard nginx configuration
 file. The most important change is the line "daemon off;", which
-forces the webserver to run in the foreground.  
+forces the webserver to run in the foreground.
+
+Create the file `custom` with the following contents:
+
+```
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	root /var/www/html-custom;
+
+	# Add index.php to the list if you are using PHP
+	index index.html index.htm index.nginx-debian.html;
+
+	server_name _;
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+
+}
+```
+
+This is used to change from the "default" webserver home page to the
+one you have created.  
 
 Save these files and push them to your GitHub repository.
 
