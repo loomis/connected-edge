@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Legal
 nav_order: 8
 parent: Hybrid Cloud (07/2019)

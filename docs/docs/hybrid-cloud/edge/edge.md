@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Edge Computing
 nav_order: 6
 has_children: true

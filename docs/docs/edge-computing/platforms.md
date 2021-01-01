@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Platforms
 nav_order: 2
 parent: Edge Computing (11/2019)

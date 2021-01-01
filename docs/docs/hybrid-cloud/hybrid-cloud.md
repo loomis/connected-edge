@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Hybrid Cloud (07/2019)
 nav_order: 2
 has_children: true

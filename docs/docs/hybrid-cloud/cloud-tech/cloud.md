@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Cloud Technologies
 nav_order: 3
 has_children: true

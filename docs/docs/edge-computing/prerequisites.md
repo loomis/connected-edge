@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Prerequisites
 nav_order: 1
 parent: Edge Computing (11/2019)

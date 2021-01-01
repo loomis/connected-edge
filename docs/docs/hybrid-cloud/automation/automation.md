@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Automation
 nav_order: 4
 description: Automation

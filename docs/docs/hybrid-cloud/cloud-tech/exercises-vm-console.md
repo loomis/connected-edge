@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Exercises-VM-Console
 nav_order: 4
 parent: Cloud Technologies

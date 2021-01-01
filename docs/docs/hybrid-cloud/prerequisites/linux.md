@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Linux Operating System
 nav_order: 2
 parent: Prerequisites

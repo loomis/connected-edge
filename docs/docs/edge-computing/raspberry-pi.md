@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Raspberry Pi
 nav_order: 4
 parent: Edge Computing (11/2019)

@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Sensors
 nav_order: 5
 parent: Edge Computing (11/2019)

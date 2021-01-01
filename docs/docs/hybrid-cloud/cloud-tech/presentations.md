@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Presentations
 nav_order: 1
 parent: Cloud Technologies

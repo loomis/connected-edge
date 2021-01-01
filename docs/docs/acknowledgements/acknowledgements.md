@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Acknowledgements
 nav_order: 5
 ---

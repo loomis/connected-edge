@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Local Machine
 nav_order: 1
 parent: Prerequisites

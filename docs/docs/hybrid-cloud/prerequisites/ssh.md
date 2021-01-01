@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Secure Shell (SSH)
 nav_order: 3
 parent: Prerequisites

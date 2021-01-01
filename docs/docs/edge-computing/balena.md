@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: BalenaCloud
 nav_order: 6
 parent: Edge Computing (11/2019)

@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Python Programming
 nav_order: 4
 parent: Prerequisites

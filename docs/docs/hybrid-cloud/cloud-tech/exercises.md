@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Exercises
 nav_order: 2
 parent: Cloud Technologies

@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Containers
 nav_order: 3
 parent: Edge Computing (11/2019)

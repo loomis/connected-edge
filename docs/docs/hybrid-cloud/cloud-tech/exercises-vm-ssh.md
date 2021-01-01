@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Exercises-VM-SSH
 nav_order: 6
 parent: Cloud Technologies

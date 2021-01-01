@@ -1,5 +1,5 @@
 ---
-layout: default-edit
+layout: default
 title: Custom Applications
 nav_order: 7
 parent: Edge Computing (11/2019)
