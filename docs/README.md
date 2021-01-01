@@ -47,7 +47,7 @@ with:
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 ```
 
-You may want to add this to your `~/.bash_login` script. You should
+You may want to add this to your `~/.zshrc` script. You should
 also make sure that the bundler gem is installed:
 
 ```sh
@@ -67,11 +67,13 @@ Install the necessary Ruby gems on your machine.  To avoid a global
 installation, you use the following command:
 
 ```sh
+bundle config set --local path 'vendor/bundle'
 bundle install --path vendor/bundle
 ```
 
 which will install all of the gems into the `vendor/bundle`
-subdirectory.  The contents of this directory are ignored by git.
+subdirectory.  You should only need to run the first command once. The
+contents of this directory are ignored by git.
 
 Finally, build and serve the documentation with the following command:
 
